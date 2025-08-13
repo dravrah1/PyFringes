@@ -229,6 +229,16 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                     mask[x,y]=1
         mask = np.uint8(mask)
         return mask
+    
+    def EllipseMask(self,N,NX,NY):
+        mask = np.zeros((N,N))
+        for x in range(N):
+            for y in range(N):
+                ell=(((float(x)-N/2)/(NX/2))**2)+(((float(y)-N/2)/(NY/2))**2)
+                if ell <= 1:
+                    mask[x,y]=1
+        mask = np.uint8(mask)
+        return mask
 
    
     def GeneratePhase(self):
@@ -309,10 +319,14 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         dist = size/2/math.sqrt(2)*1.25
         shear = 2**(0.5) * thick * math.tan(1/index * math.sin(math.pi/4))
         pix = beamsz/N
+        pixX = size/pix
+        pixY = size/pix/(math.sqrt(2))
+        NX = int(pixX)
+        NY = int(pixY)
         shearpix=int(shear/pix)
-#        mask = self.CircleMask(N,N)
+        mask = self.EllipseMask(N, NX, NY)
         global glbmask
-        mask = glbmask
+        # mask = glbmask
         N2=N+shearpix
         pad=np.zeros((N, shearpix))
         I = np.zeros((N,N2))
