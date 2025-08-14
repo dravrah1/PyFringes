@@ -284,6 +284,10 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.txtPV.setText(str(PV))
         RMS = phsimgtmp.std() * math.sqrt(float(N**2)/mask.sum())
         self.txtRMS.setText(str(RMS))
+        PVnm = PV*wavelength/(10.0**(-9))
+        self.txtPVnm.setText(str(PVnm))
+        RMSnm = RMS*wavelength/(10.0**(-9))
+        self.txtRMSnm.setText(str(RMSnm))
         # plot cross sections
         xcross = phsimg[:,int(N/2)]
         ycross = phsimg[int(N/2),:]

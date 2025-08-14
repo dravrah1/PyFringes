@@ -24,44 +24,28 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_4">
-    <item row="3" column="0">
-     <widget class="QCheckBox" name="shearplateCheck">
-      <property name="minimumSize">
-       <size>
-        <width>78</width>
-        <height>0</height>
-       </size>
-      </property>
+    <item row="7" column="0" colspan="2">
+     <widget class="QProgressBar" name="progressBar">
       <property name="maximumSize">
        <size>
-        <width>78</width>
+        <width>161</width>
         <height>16777215</height>
        </size>
       </property>
-      <property name="text">
-       <string>Shear Plate</string>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+       </font>
       </property>
-      <property name="checked">
-       <bool>true</bool>
+      <property name="value">
+       <number>0</number>
       </property>
      </widget>
     </item>
-    <item row="1" column="2" rowspan="4">
-     <widget class="QGraphicsView" name="graphicsView"/>
-    </item>
-    <item row="1" column="3" rowspan="4">
-     <widget class="QGraphicsView" name="graphicsView2"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="GenFringes">
-      <property name="maximumSize">
-       <size>
-        <width>91</width>
-        <height>16777215</height>
-       </size>
-      </property>
+    <item row="8" column="0">
+     <widget class="QPushButton" name="testButton">
       <property name="text">
-       <string>Generate Fringes</string>
+       <string>Test</string>
       </property>
      </widget>
     </item>
@@ -85,6 +69,25 @@
       </property>
      </widget>
     </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="GenFringes">
+      <property name="maximumSize">
+       <size>
+        <width>91</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Generate Fringes</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3" rowspan="4">
+     <widget class="QGraphicsView" name="graphicsView2"/>
+    </item>
+    <item row="1" column="2" rowspan="4">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
     <item row="6" column="0" colspan="2">
      <widget class="QPushButton" name="UpdateShear">
       <property name="minimumSize">
@@ -101,6 +104,28 @@
       </property>
       <property name="text">
        <string>Update Shear Image</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="shearplateCheck">
+      <property name="minimumSize">
+       <size>
+        <width>78</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>78</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Shear Plate</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -139,196 +164,11 @@
       </item>
      </widget>
     </item>
-    <item row="7" column="0" colspan="2">
-     <widget class="QProgressBar" name="progressBar">
-      <property name="maximumSize">
-       <size>
-        <width>161</width>
-        <height>16777215</height>
-       </size>
+    <item row="5" column="2" rowspan="3">
+     <widget class="QFrame" name="frame_4">
+      <property name="enabled">
+       <bool>true</bool>
       </property>
-      <property name="font">
-       <font>
-        <family>MS Shell Dlg 2</family>
-       </font>
-      </property>
-      <property name="value">
-       <number>0</number>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QFrame" name="frame_3">
-      <property name="maximumSize">
-       <size>
-        <width>174</width>
-        <height>31</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_18">
-         <property name="maximumSize">
-          <size>
-           <width>31</width>
-           <height>16</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PV</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="txtPV">
-         <property name="maximumSize">
-          <size>
-           <width>47</width>
-           <height>13</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="label_19">
-         <property name="maximumSize">
-          <size>
-           <width>47</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>RMS</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QLabel" name="txtRMS">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>13</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="5" column="0" colspan="2">
-     <widget class="QFrame" name="frame_2">
-      <property name="maximumSize">
-       <size>
-        <width>161</width>
-        <height>201</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Plate Wedge</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_15">
-         <property name="text">
-          <string>Plate Index</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_17">
-         <property name="text">
-          <string>Plate Size</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Plate Thickness</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="platewedge">
-         <property name="text">
-          <string>10</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="platesize">
-         <property name="text">
-          <string>78</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="platethickness">
-         <property name="text">
-          <string>13</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_16">
-         <property name="text">
-          <string>Beam Size</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="beamsize">
-         <property name="text">
-          <string>50</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="plateindex">
-         <property name="text">
-          <string>1.457</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="5" column="3" rowspan="3">
-     <widget class="QFrame" name="frame_5">
       <property name="palette">
        <palette>
         <active>
@@ -344,9 +184,9 @@
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>83</red>
-            <green>125</green>
-            <blue>240</blue>
+            <red>87</red>
+            <green>240</green>
+            <blue>110</blue>
            </color>
           </brush>
          </colorrole>
@@ -364,9 +204,9 @@
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>83</red>
-            <green>125</green>
-            <blue>240</blue>
+            <red>87</red>
+            <green>240</green>
+            <blue>110</blue>
            </color>
           </brush>
          </colorrole>
@@ -375,18 +215,18 @@
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>83</red>
-            <green>125</green>
-            <blue>240</blue>
+            <red>87</red>
+            <green>240</green>
+            <blue>110</blue>
            </color>
           </brush>
          </colorrole>
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>83</red>
-            <green>125</green>
-            <blue>240</blue>
+            <red>87</red>
+            <green>240</green>
+            <blue>110</blue>
            </color>
           </brush>
          </colorrole>
@@ -402,6 +242,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
+      <layout class="QGridLayout" name="gridLayout_5"/>
      </widget>
     </item>
     <item row="2" column="0" colspan="2">
@@ -642,11 +483,224 @@
       </layout>
      </widget>
     </item>
-    <item row="5" column="2" rowspan="3">
-     <widget class="QFrame" name="frame_4">
-      <property name="enabled">
-       <bool>true</bool>
+    <item row="0" column="2">
+     <widget class="QFrame" name="frame_3">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>62</height>
+       </size>
       </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_19">
+         <property name="maximumSize">
+          <size>
+           <width>47</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>RMS</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_18">
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>PV</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="txtPV">
+         <property name="maximumSize">
+          <size>
+           <width>47</width>
+           <height>13</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="txtRMS">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>13</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string>PV(nm)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="label_21">
+         <property name="text">
+          <string>RMS(nm)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="txtPVnm">
+         <property name="maximumSize">
+          <size>
+           <width>47</width>
+           <height>13</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QLabel" name="txtRMSnm">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="2">
+     <widget class="QFrame" name="frame_2">
+      <property name="maximumSize">
+       <size>
+        <width>161</width>
+        <height>201</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Plate Wedge</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Plate Index</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>Plate Size</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Plate Thickness</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="platewedge">
+         <property name="text">
+          <string>10</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="platesize">
+         <property name="text">
+          <string>78</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="platethickness">
+         <property name="text">
+          <string>13</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>Beam Size</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="beamsize">
+         <property name="text">
+          <string>50</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="plateindex">
+         <property name="text">
+          <string>1.457</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="5" column="3" rowspan="3">
+     <widget class="QFrame" name="frame_5">
       <property name="palette">
        <palette>
         <active>
@@ -662,9 +716,9 @@
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>87</red>
-            <green>240</green>
-            <blue>110</blue>
+            <red>83</red>
+            <green>125</green>
+            <blue>240</blue>
            </color>
           </brush>
          </colorrole>
@@ -682,9 +736,9 @@
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>87</red>
-            <green>240</green>
-            <blue>110</blue>
+            <red>83</red>
+            <green>125</green>
+            <blue>240</blue>
            </color>
           </brush>
          </colorrole>
@@ -693,18 +747,18 @@
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>87</red>
-            <green>240</green>
-            <blue>110</blue>
+            <red>83</red>
+            <green>125</green>
+            <blue>240</blue>
            </color>
           </brush>
          </colorrole>
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>87</red>
-            <green>240</green>
-            <blue>110</blue>
+            <red>83</red>
+            <green>125</green>
+            <blue>240</blue>
            </color>
           </brush>
          </colorrole>
@@ -720,14 +774,6 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout_5"/>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QPushButton" name="testButton">
-      <property name="text">
-       <string>Test</string>
-      </property>
      </widget>
     </item>
    </layout>
@@ -738,7 +784,7 @@
      <x>0</x>
      <y>0</y>
      <width>1197</width>
-     <height>38</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
